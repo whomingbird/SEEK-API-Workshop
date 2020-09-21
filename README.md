@@ -65,8 +65,8 @@
 Find more Jupyter-Notebooks, examples and Exercises here:
 - https://github.com/FAIRdom/api-workshop
 - https://github.com/seek4science/seekAPIexamples
-- https://github.com/matthiaskoenig/ipython_for_SEEK-API
 
 ## Usage examples
 - https://seek.lisym.org/investigations/20
+  - script (https://github.com/matthiaskoenig/ipython_for_SEEK-API)
 - https://pubchem.ncbi.nlm.nih.gov/pathway/COVID-19+Disease+Map:704
