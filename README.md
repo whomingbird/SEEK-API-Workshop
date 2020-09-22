@@ -67,6 +67,10 @@ Find more Jupyter-Notebooks, examples and Exercises here:
 - https://github.com/seek4science/seekAPIexamples
 
 ## Usage examples
+
 - https://seek.lisym.org/investigations/20
+  - Example ipython notebook to use the SEEK writeAPI to create an ISA structure
   - script (https://github.com/matthiaskoenig/ipython_for_SEEK-API)
-- https://pubchem.ncbi.nlm.nih.gov/pathway/COVID-19+Disease+Map:704
+  
+- https://publications.h-its.org/ 
+  - HITS uses SEEK to keep a general overview over all HITS publications and to extract them using readAPI for the HITS website(https://www.h-its.org/research/ain/publications/), the HITS annual report as well as for other purposes. 
