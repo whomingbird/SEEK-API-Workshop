@@ -1,0 +1,14 @@
+{
+  "data": {
+    "type": "people",
+    "attributes": {
+      "first_name": "FIRST_NAME",
+      "last_name": "LAST_NAME",
+      "email": "FIRST_NAME.LAST_NAME@email.com",
+      "description": "DESCRIPTION",
+      "web_page": "WEBSITE",
+      "orcid": "ORCID",
+      "phone": "PHONE_NUMBER"
+    }
+  }
+}

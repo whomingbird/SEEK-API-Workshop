@@ -1,0 +1,34 @@
+{
+  "data": {
+    "type": "people",
+    "attributes": {
+      "first_name": "Sophia",
+      "last_name": "Schneider",
+      "email": "s.schneiderhu@gmail.org",
+      "description": "Research Associate",
+      "web_page": "https://www.h-its.org",
+      "phone": "+49 (0)0000000000",
+      "skype_name": "s.schneider",
+      "expertise": [
+        "GOT",
+        "programming"
+      ],
+      "tools": [
+        "javascript",
+        "C++",
+        "Python",
+        "Ruby"
+      ]
+    },
+    "relationships": {
+      "projects": {
+        "data": [
+          {
+            "id": "2",
+            "type": "projects"
+          }
+        ]
+      }
+    }
+  }
+}
