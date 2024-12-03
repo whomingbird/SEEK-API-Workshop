@@ -1,12 +1,11 @@
-# SeekAPI Workshop
+# SEEK API Workshop
 
 ## Links
 - [Workshop Resources](https://github.com/whomingbird/SEEK-API-Workshop)
-- [The Seek-Test-Instance for this workshop](https://sandbox2.fairdomhub.org)
 - Documentation
-  - [Seek homepage](https://seek4science.org)
-  - [The Seek documentation](https://docs.seek4science.org)
-  - [The SeekAPI documentation](https://docs.seek4science.org/tech/api/index.html)
+  - [SEEK homepage](https://seek4science.org)
+  - [The SEEK documentation](https://docs.seek4science.org)
+  - [The SEEK API documentation](https://docs.seek4science.org/tech/api/index.html)
   - [Installation&Configuration troubleshooting](https://github.com/carpentries/workshop-template/wiki/Configuration-Problems-and-Solutions)
 
 
@@ -52,12 +51,27 @@
   - [see the documentation](https://docs.seek4science.org/tech/api/index.html#tag/search)
   - `assays`, `data_files`, `events`, `institutions`, `investigations`, `models`, `people`, `presentations`, `programmes`, `projects`, `publications`, `sample_types`, `sops`, `studies`
 - authentication
-  - for using write access and requesting protected resources, you need to create a session
+  - basic authentication
+    for using write access and requesting protected resources, you need to create a session
   ```py
     session = requests.Session()
     session.headers.update(headers)
     session.auth = (input('Username:'), getpass.getpass('Password'))
   ```
+  - API token
+    1. in order to authenticate you when performing API requests, you need to create an API token. You can create your token with the following steps:
+    "My profile" => "Action" => "API tokens"=> "New API token"
+    2. include the token in header 
+  ```py
+
+      headers = {
+             "Content-type": "application/vnd.api+json",
+             "Accept": "application/vnd.api+json",
+             "Accept-Charset": "ISO-8859-1",
+             "Authorization: Token {my_token}" 
+             }
+  ```
+
 
 ## Information and further reading
 [All Jupyter-Notebooks in this repository are originally from this project.](https://github.com/FAIRdom/api-workshop)
