@@ -2,13 +2,13 @@
   "data": {
     "type": "people",
     "attributes": {
-      "first_name": "Sophia",
-      "last_name": "Schneider",
-      "email": "s.schneiderhu@gmail.org",
+      "first_name": "Jane",
+      "last_name": "Doe",
+      "email": "jane.doe@example.org",
       "description": "Research Associate",
-      "web_page": "https://www.h-its.org",
-      "phone": "+49 (0)0000000000",
-      "skype_name": "s.schneider",
+      "web_page": "https://www.example.org",
+      "orcid": "https://orcid.org/0000-0001-9842-9718",
+      "phone": "+49 6221 0000000",
       "expertise": [
         "GOT",
         "programming"
@@ -24,7 +24,7 @@
       "projects": {
         "data": [
           {
-            "id": "2",
+            "id": "1",
             "type": "projects"
           }
         ]

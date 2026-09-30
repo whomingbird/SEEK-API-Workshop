@@ -92,7 +92,7 @@ pip install -r requirements.txt
 cp seek_config.example.json seek_config.json   # then open seek_config.json and paste your API token
 jupyter lab
 ```
-Notebooks 04-06 run against a training SEEK instance (`http://localhost:3000` by default). Notebook 06 reads the URL and token from `seek_config.json` (ignored by git), or from the environment variables `SEEK_BASE_URL` and `SEEK_API_TOKEN` if they are set.
+Notebooks 04-06 write to a training SEEK instance (`http://localhost:3000` by default). They read the URL and token from `seek_config.json` (ignored by git), or from the environment variables `SEEK_BASE_URL` and `SEEK_API_TOKEN` if those are set.
 
 
 ## Information and further reading
