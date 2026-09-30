@@ -7,3 +7,6 @@ seek_config.json
 
 # Workshop sample data, too large for GitHub (100 MB limit); distributed separately
 06_Upload_Datafile/*.tar.gz
+
+# Files saved by notebook 03
+downloads/
