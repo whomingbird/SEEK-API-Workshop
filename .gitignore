@@ -4,3 +4,6 @@ seek_config.json
 # macOS / Jupyter clutter
 .DS_Store
 .ipynb_checkpoints/
+
+# Workshop sample data, too large for GitHub (100 MB limit); distributed separately
+06_Upload_Datafile/*.tar.gz
