@@ -1,0 +1,6 @@
+# Local configuration with your personal API token - never commit this
+seek_config.json
+
+# macOS / Jupyter clutter
+.DS_Store
+.ipynb_checkpoints/

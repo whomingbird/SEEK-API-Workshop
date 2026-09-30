@@ -51,26 +51,48 @@
   - [see the documentation](https://docs.seek4science.org/tech/api/index.html#tag/search)
   - `assays`, `data_files`, `events`, `institutions`, `investigations`, `models`, `people`, `presentations`, `programmes`, `projects`, `publications`, `sample_types`, `sops`, `studies`
 - authentication
-  - basic authentication
-    for using write access and requesting protected resources, you need to create a session
+  - for write access and for reading protected resources you must authenticate. **Use an API token** (recommended); basic authentication is kept below only for reference.
+  - API token (recommended)
+    1. create a token in SEEK: "My profile" => "Actions" => "API tokens" => "New API token". Copy it immediately, it is shown only once.
+    2. keep it out of the notebook (environment variable or `getpass`) and send it in the `Authorization` header of a `requests.Session`:
+  ```py
+    import os, getpass, requests
+
+    api_token = os.environ.get("SEEK_API_TOKEN") or getpass.getpass("SEEK API token: ")
+
+    session = requests.Session()
+    session.headers.update({
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Authorization": f"Token {api_token}",
+    })
+    session.get(base_url + "/projects/1").json()
+  ```
+    A token can be deleted at any time without changing your password, and it also works for accounts that log in via LDAP/SSO/ORCID. See `06_Upload_Datafile/06_Upload_a_data_file.ipynb` for a complete example.
+  - basic authentication (legacy)
   ```py
     session = requests.Session()
     session.headers.update(headers)
     session.auth = (input('Username:'), getpass.getpass('Password'))
   ```
-  - API token
-    1. in order to authenticate you when performing API requests, you need to create an API token. You can create your token with the following steps:
-    "My profile" => "Action" => "API tokens"=> "New API token"
-    2. include the token in header 
-  ```py
 
-      headers = {
-             "Content-type": "application/vnd.api+json",
-             "Accept": "application/vnd.api+json",
-             "Accept-Charset": "ISO-8859-1",
-             "Authorization: Token {my_token}" 
-             }
-  ```
+## Notebooks
+| Notebook | Topic | Needs a token? |
+|---|---|---|
+| `01_Person.ipynb` | reading a resource, JSON:API structure | no (FAIRDOMHub, public) |
+| `02_Project_data_files.ipynb` | following relationships | no |
+| `03_Fetching_data.ipynb` | content blobs, downloading, spreadsheet to CSV | no |
+| `04_Batch_Create_Person/04_Add_new_user_profile.ipynb` | creating and updating people, batch from Excel | yes |
+| `05_Upload_a_model.ipynb` | registering a Model and filling its content from a URL | yes |
+| `06_Upload_Datafile/06_Upload_a_data_file.ipynb` | uploading a large local file as a Data file: register, stream the bytes, verify checksums, PATCH, DELETE | yes |
+
+## Setup
+```sh
+pip install -r requirements.txt
+cp seek_config.example.json seek_config.json   # then open seek_config.json and paste your API token
+jupyter lab
+```
+Notebooks 04-06 run against a training SEEK instance (`http://localhost:3000` by default). Notebook 06 reads the URL and token from `seek_config.json` (ignored by git), or from the environment variables `SEEK_BASE_URL` and `SEEK_API_TOKEN` if they are set.
 
 
 ## Information and further reading

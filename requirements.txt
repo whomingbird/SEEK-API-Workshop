@@ -1,0 +1,9 @@
+# Python packages used by the notebooks in this repository.
+# Install with:  pip install -r requirements.txt
+# Tested with Python 3.10.
+
+requests>=2.32      # HTTP calls to the SEEK API (all notebooks)
+pandas>=2.0         # tabular display of JSON (01, 02, 03, 04)
+openpyxl>=3.1       # lets pandas read the .xlsx people list (04)
+tqdm>=4.66          # upload progress bar (06)
+jupyterlab>=4.0     # to run the notebooks
