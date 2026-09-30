@@ -83,7 +83,7 @@
 | `02_Project_data_files.ipynb` | following relationships | no |
 | `03_Fetching_data.ipynb` | content blobs, downloading, spreadsheet to CSV | no |
 | `04_Batch_Create_Person/04_Add_new_user_profile.ipynb` | creating and updating people, batch from Excel | yes |
-| `05_Upload_a_model.ipynb` | registering a Model and filling its content from a URL | yes |
+| `05_Upload_a_model.ipynb` | uploading a Model with several files: fetch an SBML model from the FAIRDOMHub, register, upload each blob, verify | yes |
 | `06_Upload_Datafile/06_Upload_a_data_file.ipynb` | uploading a large local file as a Data file: register, stream the bytes, verify checksums, PATCH, DELETE | yes |
 
 ## Setup
