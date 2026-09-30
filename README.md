@@ -94,6 +94,8 @@ jupyter lab
 ```
 Notebooks 04-06 write to a training SEEK instance (`http://localhost:3000` by default). They read the URL and token from `seek_config.json` (ignored by git), or from the environment variables `SEEK_BASE_URL` and `SEEK_API_TOKEN` if those are set.
 
+Notebook 06 uploads a large file of **your own**: copy any file (ideally 50 MB to a few hundred MB) into `06_Upload_Datafile/` and enter its name in section 6.7. The example archive used to write the notebook is not in the repository because GitHub rejects files over 100 MB.
+
 
 ## Information and further reading
 [All Jupyter-Notebooks in this repository are originally from this project.](https://github.com/FAIRdom/api-workshop)
